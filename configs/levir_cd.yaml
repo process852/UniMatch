@@ -1,0 +1,22 @@
+# arguments for dataset
+dataset: levircd
+nclass: 2
+crop_size: 224
+data_root: /data/home/jinjuncan/dataset/LEVIR_CD
+
+# arguments for training
+epochs: 80
+batch_size: 8
+lr: 0.01
+lr_multi: 10
+criterion:
+  name: CELoss
+  kwargs:
+    ignore_index: 255
+conf_thresh: 0.7
+
+# arguments for model
+backbone: resnet50
+multi_grid: True
+replace_stride_with_dilation: [False, True, True]
+dilations: [12, 24, 36]

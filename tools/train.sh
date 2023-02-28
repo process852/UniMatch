@@ -1,12 +1,14 @@
 #!/bin/bash
 now=$(date +"%Y%m%d_%H%M%S")
 
-config=configs/pascal.yaml
-labeled_id_path=partitions/pascal/1464/labeled.txt
-unlabeled_id_path=partitions/pascal/1464/unlabeled.txt
-save_path=exp/pascal/1464/unimatch
+config=configs/levir_cd.yaml
+labeled_id_path=partitions/levircd/1_10/train_l.txt
+unlabeled_id_path=partitions/levircd/1_10/train_u.txt
+save_path=/data/home/jinjuncan/dataset/exp_levir/exp2
 
 mkdir -p $save_path
+
+export CUDA_VISIBLE_DEVICES=6,7
 
 python -m torch.distributed.launch \
     --nproc_per_node=$1 \

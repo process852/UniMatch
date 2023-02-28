@@ -27,49 +27,58 @@ class SemiDataset(Dataset):
                 random.shuffle(self.ids)
                 self.ids = self.ids[:nsample]
         else:
-            with open('partitions/%s/val.txt' % name, 'r') as f:
+            with open(id_path, 'r') as f:
                 self.ids = f.read().splitlines()
 
     def __getitem__(self, item):
         id = self.ids[item]
-        img = Image.open(os.path.join(self.root, id.split(' ')[0])).convert('RGB')
-        mask = Image.fromarray(np.array(Image.open(os.path.join(self.root, id.split(' ')[1]))))
+        ## use for change detection, we use three images, A, B, Label
+        imgA = Image.open(id.split(' ')[0]).convert("RGB")
+        imgB = Image.open(id.split(' ')[1]).convert("RGB")
+        mask = Image.fromarray(np.array(Image.open(id.split(' ')[2])))
+        # img = Image.open(os.path.join(self.root, id.split(' ')[0])).convert('RGB')
+        # mask = Image.fromarray(np.array(Image.open(os.path.join(self.root, id.split(' ')[1]))))
 
         if self.mode == 'val':
-            img, mask = normalize(img, mask)
-            return img, mask, id
+            imgA, imgB, mask = normalize(imgA, imgB, mask)
+            return imgA, imgB, mask, id
 
-        img, mask = resize(img, mask, (0.5, 2.0))
+        imgA, imgB, mask = resize(imgA, imgB, mask, (0.5, 2.0))
         ignore_value = 254 if self.mode == 'train_u' else 255
-        img, mask = crop(img, mask, self.size, ignore_value)
-        img, mask = hflip(img, mask, p=0.5)
+        imgA, imgB, mask = crop(imgA, imgB, mask, self.size, ignore_value)
+        imgA, imgB, mask = hflip(imgA, imgB, mask, p=0.5)
 
         if self.mode == 'train_l':
-            return normalize(img, mask)
+            return normalize(imgA, imgB, mask)
 
-        img_w, img_s1, img_s2 = deepcopy(img), deepcopy(img), deepcopy(img)
-
-        if random.random() < 0.8:
-            img_s1 = transforms.ColorJitter(0.5, 0.5, 0.5, 0.25)(img_s1)
-        img_s1 = transforms.RandomGrayscale(p=0.2)(img_s1)
-        img_s1 = blur(img_s1, p=0.5)
-        cutmix_box1 = obtain_cutmix_box(img_s1.size[0], p=0.5)
+        imgA_w, imgA_s1, imgA_s2 = deepcopy(imgA), deepcopy(imgA), deepcopy(imgA)
+        imgB_w, imgB_s1, imgB_s2 = deepcopy(imgB), deepcopy(imgB), deepcopy(imgB)
 
         if random.random() < 0.8:
-            img_s2 = transforms.ColorJitter(0.5, 0.5, 0.5, 0.25)(img_s2)
-        img_s2 = transforms.RandomGrayscale(p=0.2)(img_s2)
-        img_s2 = blur(img_s2, p=0.5)
-        cutmix_box2 = obtain_cutmix_box(img_s2.size[0], p=0.5)
+            imgA_s1 = transforms.ColorJitter(0.5, 0.5, 0.5, 0.25)(imgA_s1)
+            imgB_s1 = transforms.ColorJitter(0.5, 0.5, 0.5, 0.25)(imgB_s1)
+        # img_s1 = transforms.RandomGrayscale(p=0.2)(img_s1)
+        imgA_s1, imgB_s1= blur(imgA_s1, imgB_s1, p=0.5)
+        # cutmix_box1 = obtain_cutmix_box(img_s1.size[0], p=0.5)
+
+        if random.random() < 0.8:
+            imgA_s2 = transforms.ColorJitter(0.5, 0.5, 0.5, 0.25)(imgA_s2)
+            imgB_s2 = transforms.ColorJitter(0.5, 0.5, 0.5, 0.25)(imgB_s2)
+        # img_s2 = transforms.RandomGrayscale(p=0.2)(imgA_s2)
+        imgA_s2, imgB_s2 = blur(imgA_s2, imgB_s2, p=0.5)
+        # cutmix_box2 = obtain_cutmix_box(img_s2.size[0], p=0.5)
 
         ignore_mask = Image.fromarray(np.zeros((mask.size[1], mask.size[0])))
 
-        img_s1, ignore_mask = normalize(img_s1, ignore_mask)
-        img_s2 = normalize(img_s2)
+        imgA_s1, imgB_s1 = normalize(imgA_s1, imgB_s1)
+        imgA_s2, imgB_s2 = normalize(imgA_s2, imgB_s2)
 
-        mask = torch.from_numpy(np.array(mask)).long()
-        ignore_mask[mask == 254] = 255
-
-        return normalize(img_w), img_s1, img_s2, ignore_mask, cutmix_box1, cutmix_box2
+        mask = np.array(mask)
+        mask[mask > 127] = 1
+        mask = torch.from_numpy(mask).long()
+        # ignore_mask[mask == 254] = 255
+        imgA_w, imgB_w = normalize(imgA_w, imgB_w)
+        return imgA_w, imgB_w, imgA_s1, imgB_s1, imgA_s2, imgB_s2, mask
 
     def __len__(self):
         return len(self.ids)

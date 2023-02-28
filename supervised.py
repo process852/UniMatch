@@ -17,7 +17,7 @@ import yaml
 from dataset.semi import SemiDataset
 from model.semseg.deeplabv3plus import DeepLabV3Plus
 from util.ohem import ProbOhemCrossEntropy2d
-from util.utils import count_params, AverageMeter, intersectionAndUnion, init_log
+from util.utils import count_params, AverageMeter, intersectionAndUnion, init_log, eval_metric
 from util.dist_helper import setup_distributed
 
 
@@ -33,12 +33,17 @@ parser.add_argument('--port', default=None, type=int)
 def evaluate(model, loader, mode, cfg):
     model.eval()
     assert mode in ['original', 'center_crop', 'sliding_window']
-    intersection_meter = AverageMeter()
-    union_meter = AverageMeter()
+    iou0_meter = AverageMeter()
+    iou1_meter = AverageMeter()
+    precision_meter = AverageMeter()
+    recall_meter = AverageMeter()
+    accuracy_meter = AverageMeter()
+    f1_meter = AverageMeter()
+    
 
     with torch.no_grad():
-        for img, mask, id in loader:
-            img = img.cuda()
+        for imgA, imgB, mask, id in loader:
+            imgA, imgB= imgA.cuda(), imgB.cuda()
 
             if mode == 'sliding_window':
                 grid = cfg['crop_size']
@@ -62,26 +67,50 @@ def evaluate(model, loader, mode, cfg):
                     img = img[:, :, start_h:start_h + cfg['crop_size'], start_w:start_w + cfg['crop_size']]
                     mask = mask[:, start_h:start_h + cfg['crop_size'], start_w:start_w + cfg['crop_size']]
 
-                pred = model(img).argmax(dim=1)
+                pred = model(torch.cat((imgA, imgB)), mode = "eval").argmax(dim=1)
 
-            intersection, union, target = \
-                intersectionAndUnion(pred.cpu().numpy(), mask.numpy(), cfg['nclass'], 255)
+            # intersection, union, target = \
+            #     intersectionAndUnion(pred.cpu().numpy(), mask.numpy(), cfg['nclass'], 255)
+            result = eval_metric(pred.cpu(), mask)
+            print(result)
 
-            reduced_intersection = torch.from_numpy(intersection).cuda()
-            reduced_union = torch.from_numpy(union).cuda()
-            reduced_target = torch.from_numpy(target).cuda()
+            # reduced_intersection = torch.from_numpy(intersection).cuda()
+            # reduced_union = torch.from_numpy(union).cuda()
+            # reduced_target = torch.from_numpy(target).cuda()
 
-            dist.all_reduce(reduced_intersection)
-            dist.all_reduce(reduced_union)
-            dist.all_reduce(reduced_target)
+            reduced_iou0 = result['unchange_IOU'].cuda()
+            reduced_iou1 = result['change_IOU'].cuda()
+            reduced_accuracy = result['Accuracy'].cuda()
+            reduced_precision = result['Precision'].cuda()
+            reduced_recall = result['Recall'].cuda()
+            reduced_f1_score = result['F1_score'].cuda()
 
-            intersection_meter.update(reduced_intersection.cpu().numpy())
-            union_meter.update(reduced_union.cpu().numpy())
+            # dist.all_reduce(reduced_intersection)
+            # dist.all_reduce(reduced_union)
+            # dist.all_reduce(reduced_target)
+            
+            dist.all_reduce(reduced_iou0)
+            dist.all_reduce(reduced_iou1)
+            dist.all_reduce(reduced_accuracy)
+            dist.all_reduce(reduced_precision)
+            dist.all_reduce(reduced_recall)
+            dist.all_reduce(reduced_f1_score)
 
-    iou_class = intersection_meter.sum / (union_meter.sum + 1e-10)
-    mIOU = np.mean(iou_class) * 100.0
+            # intersection_meter.update(reduced_intersection.cpu().numpy())
+            # union_meter.update(reduced_union.cpu().numpy())
+            world_size = dist.get_world_size()
+            iou0_meter.update(reduced_iou0.cpu().numpy() / world_size)
+            iou1_meter.update(reduced_iou1.cpu().numpy() / world_size)
+            accuracy_meter.update(reduced_accuracy.cpu().numpy() / world_size)
+            precision_meter.update(reduced_precision.cpu().numpy() / world_size)
+            recall_meter.update(reduced_recall.cpu().numpy() / world_size)
+            f1_meter.update(reduced_f1_score.cpu().numpy() / world_size)
 
-    return mIOU, iou_class
+    # iou_class = intersection_meter.sum / (union_meter.sum + 1e-10)
+    # mIOU = np.mean(iou_class) * 100.0
+
+    return (iou0_meter.avg, iou1_meter.avg, accuracy_meter.avg, 
+                recall_meter.avg, precision_meter.avg, f1_meter.avg)
 
 
 def main():

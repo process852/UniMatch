@@ -1,0 +1,1208 @@
+/data/home/jinjuncan/miniconda3/envs/gcc9/lib/python3.7/site-packages/torch/distributed/launch.py:188: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use_env is set by default in torchrun.
+If your script expects `--local_rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  FutureWarning,
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+[2023-02-27 06:52:40,262][    INFO] {'backbone': 'resnet50',
+ 'batch_size': 8,
+ 'conf_thresh': 0.7,
+ 'criterion': {'kwargs': {'ignore_index': 255}, 'name': 'CELoss'},
+ 'crop_size': 224,
+ 'data_root': '/data/home/jinjuncan/dataset/LEVIR_CD',
+ 'dataset': 'levircd',
+ 'dilations': [12, 24, 36],
+ 'epochs': 80,
+ 'lr': 0.01,
+ 'lr_multi': 10,
+ 'multi_grid': True,
+ 'nclass': 2,
+ 'replace_stride_with_dilation': [False, True, True]}
+
+[2023-02-27 06:52:40,670][    INFO] Total params: 40.5M
+
+[2023-02-27 06:52:41,689][    INFO] ===========> Epoch: 0, LR: 0.0100, Previous best: 0.00
+/data/home/jinjuncan/miniconda3/envs/gcc9/lib/python3.7/site-packages/torch/distributed/distributed_c10d.py:2388: UserWarning: torch.distributed._all_gather_base is a private function and will be deprecated. Please use torch.distributed.all_gather_into_tensor instead.
+  "torch.distributed._all_gather_base is a private function and will be "
+/data/home/jinjuncan/miniconda3/envs/gcc9/lib/python3.7/site-packages/torch/distributed/distributed_c10d.py:2388: UserWarning: torch.distributed._all_gather_base is a private function and will be deprecated. Please use torch.distributed.all_gather_into_tensor instead.
+  "torch.distributed._all_gather_base is a private function and will be "
+[2023-02-27 06:52:49,306][    INFO] Iters: 0, Total loss: 0.635, Loss x: 0.771, Loss s: 0.575, Loss w_fp: 0.423, Mask: 0.017
+[2023-02-27 06:53:21,179][    INFO] Iters: 50, Total loss: 0.139, Loss x: 0.241, Loss s: 0.044, Loss w_fp: 0.028, Mask: 0.978
+[2023-02-27 06:53:53,145][    INFO] Iters: 100, Total loss: 0.110, Loss x: 0.193, Loss s: 0.032, Loss w_fp: 0.022, Mask: 0.989
+[2023-02-27 06:54:25,285][    INFO] Iters: 150, Total loss: 0.097, Loss x: 0.171, Loss s: 0.029, Loss w_fp: 0.019, Mask: 0.992
+[2023-02-27 06:54:57,472][    INFO] Iters: 200, Total loss: 0.090, Loss x: 0.159, Loss s: 0.027, Loss w_fp: 0.016, Mask: 0.992
+[2023-02-27 06:55:29,747][    INFO] Iters: 250, Total loss: 0.086, Loss x: 0.151, Loss s: 0.026, Loss w_fp: 0.014, Mask: 0.989
+[2023-02-27 06:56:02,029][    INFO] Iters: 300, Total loss: 0.082, Loss x: 0.145, Loss s: 0.025, Loss w_fp: 0.012, Mask: 0.987
+[2023-02-27 06:56:34,307][    INFO] Iters: 350, Total loss: 0.079, Loss x: 0.140, Loss s: 0.024, Loss w_fp: 0.011, Mask: 0.986
+[2023-02-27 06:57:15,624][    INFO] ***** Evaluation original ***** >>>> meanIOU: 91193519322968260608.00 IOU1: 182387038645936521216.00, IOU1: 191.96,                         Accuracy: 192.07, Recall: 1621789491192627.25, Precision: 1181988086612510.50, F1: 41247178944314.27
+
+[2023-02-27 06:57:15,792][    INFO] ===========> Epoch: 1, LR: 0.0099, Previous best: 91193519322968260608.00
+[2023-02-27 06:57:16,886][    INFO] Iters: 0, Total loss: 0.061, Loss x: 0.109, Loss s: 0.018, Loss w_fp: 0.009, Mask: 0.975
+[2023-02-27 06:57:49,085][    INFO] Iters: 50, Total loss: 0.061, Loss x: 0.105, Loss s: 0.023, Loss w_fp: 0.009, Mask: 0.974
+[2023-02-27 06:58:21,287][    INFO] Iters: 100, Total loss: 0.060, Loss x: 0.104, Loss s: 0.023, Loss w_fp: 0.009, Mask: 0.977
+[2023-02-27 06:58:53,508][    INFO] Iters: 150, Total loss: 0.061, Loss x: 0.105, Loss s: 0.024, Loss w_fp: 0.009, Mask: 0.975
+[2023-02-27 06:59:25,676][    INFO] Iters: 200, Total loss: 0.060, Loss x: 0.103, Loss s: 0.025, Loss w_fp: 0.009, Mask: 0.975
+[2023-02-27 06:59:57,840][    INFO] Iters: 250, Total loss: 0.059, Loss x: 0.101, Loss s: 0.027, Loss w_fp: 0.009, Mask: 0.974
+[2023-02-27 07:00:30,010][    INFO] Iters: 300, Total loss: 0.059, Loss x: 0.101, Loss s: 0.027, Loss w_fp: 0.010, Mask: 0.973
+[2023-02-27 07:01:02,223][    INFO] Iters: 350, Total loss: 0.059, Loss x: 0.099, Loss s: 0.028, Loss w_fp: 0.010, Mask: 0.972
+[2023-02-27 07:01:40,929][    INFO] ***** Evaluation original ***** >>>> meanIOU: 93551972408597790720.00 IOU1: 187103944817195581440.00, IOU1: 192.02,                         Accuracy: 192.12, Recall: 1621788298855361.75, Precision: 989573981566104.75, F1: 13744097932313.24
+
+[2023-02-27 07:01:41,090][    INFO] ===========> Epoch: 2, LR: 0.0098, Previous best: 93551972408597790720.00
+[2023-02-27 07:01:42,203][    INFO] Iters: 0, Total loss: 0.077, Loss x: 0.139, Loss s: 0.022, Loss w_fp: 0.007, Mask: 0.937
+[2023-02-27 07:02:14,400][    INFO] Iters: 50, Total loss: 0.063, Loss x: 0.107, Loss s: 0.028, Loss w_fp: 0.009, Mask: 0.975
+[2023-02-27 07:02:46,551][    INFO] Iters: 100, Total loss: 0.062, Loss x: 0.103, Loss s: 0.030, Loss w_fp: 0.010, Mask: 0.974
+[2023-02-27 07:03:18,702][    INFO] Iters: 150, Total loss: 0.060, Loss x: 0.099, Loss s: 0.032, Loss w_fp: 0.010, Mask: 0.972
+[2023-02-27 07:03:50,910][    INFO] Iters: 200, Total loss: 0.060, Loss x: 0.097, Loss s: 0.034, Loss w_fp: 0.011, Mask: 0.970
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 2379349 closing signal SIGTERM
+ERROR:torch.distributed.elastic.multiprocessing.api:failed (exitcode: -9) local_rank: 0 (pid: 2379348) of binary: /data/home/jinjuncan/miniconda3/envs/gcc9/bin/python
+Traceback (most recent call last):
+  File "/data/home/jinjuncan/miniconda3/envs/gcc9/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/data/home/jinjuncan/miniconda3/envs/gcc9/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/data/home/jinjuncan/miniconda3/envs/gcc9/lib/python3.7/site-packages/torch/distributed/launch.py", line 195, in <module>
+    main()
+  File "/data/home/jinjuncan/miniconda3/envs/gcc9/lib/python3.7/site-packages/torch/distributed/launch.py", line 191, in main
+    launch(args)
+  File "/data/home/jinjuncan/miniconda3/envs/gcc9/lib/python3.7/site-packages/torch/distributed/launch.py", line 176, in launch
+    run(args)
+  File "/data/home/jinjuncan/miniconda3/envs/gcc9/lib/python3.7/site-packages/torch/distributed/run.py", line 756, in run
+    )(*cmd_args)
+  File "/data/home/jinjuncan/miniconda3/envs/gcc9/lib/python3.7/site-packages/torch/distributed/launcher/api.py", line 132, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/data/home/jinjuncan/miniconda3/envs/gcc9/lib/python3.7/site-packages/torch/distributed/launcher/api.py", line 248, in launch_agent
+    failures=result.failures,
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+========================================================
+unimatch.py FAILED
+--------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+--------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2023-02-27_07:04:09
+  host      : oneflow-27
+  rank      : 0 (local_rank: 0)
+  exitcode  : -9 (pid: 2379348)
+  error_file: <N/A>
+  traceback : Signal 9 (SIGKILL) received by PID 2379348
+========================================================
+/data/home/jinjuncan/miniconda3/envs/gcc9/lib/python3.7/site-packages/torch/distributed/launch.py:188: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use_env is set by default in torchrun.
+If your script expects `--local_rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  FutureWarning,
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+[2023-02-27 07:10:21,577][    INFO] {'backbone': 'resnet50',
+ 'batch_size': 8,
+ 'conf_thresh': 0.7,
+ 'criterion': {'kwargs': {'ignore_index': 255}, 'name': 'CELoss'},
+ 'crop_size': 224,
+ 'data_root': '/data/home/jinjuncan/dataset/LEVIR_CD',
+ 'dataset': 'levircd',
+ 'dilations': [12, 24, 36],
+ 'epochs': 80,
+ 'lr': 0.01,
+ 'lr_multi': 10,
+ 'multi_grid': True,
+ 'nclass': 2,
+ 'replace_stride_with_dilation': [False, True, True]}
+
+[2023-02-27 07:10:21,990][    INFO] Total params: 40.5M
+
+[2023-02-27 07:10:22,983][    INFO] ===========> Epoch: 0, LR: 0.0100, Previous best: 0.00
+/data/home/jinjuncan/miniconda3/envs/gcc9/lib/python3.7/site-packages/torch/distributed/distributed_c10d.py:2388: UserWarning: torch.distributed._all_gather_base is a private function and will be deprecated. Please use torch.distributed.all_gather_into_tensor instead.
+  "torch.distributed._all_gather_base is a private function and will be "
+/data/home/jinjuncan/miniconda3/envs/gcc9/lib/python3.7/site-packages/torch/distributed/distributed_c10d.py:2388: UserWarning: torch.distributed._all_gather_base is a private function and will be deprecated. Please use torch.distributed.all_gather_into_tensor instead.
+  "torch.distributed._all_gather_base is a private function and will be "
+[2023-02-27 07:10:30,500][    INFO] Iters: 0, Total loss: 0.675, Loss x: 0.770, Loss s: 0.571, Loss w_fp: 0.590, Mask: 0.029
+[2023-02-27 07:11:02,406][    INFO] Iters: 50, Total loss: 0.173, Loss x: 0.302, Loss s: 0.054, Loss w_fp: 0.033, Mask: 0.980
+[2023-02-27 07:11:34,390][    INFO] Iters: 100, Total loss: 0.128, Loss x: 0.225, Loss s: 0.038, Loss w_fp: 0.024, Mask: 0.990
+[2023-02-27 07:12:06,593][    INFO] Iters: 150, Total loss: 0.111, Loss x: 0.196, Loss s: 0.032, Loss w_fp: 0.020, Mask: 0.993
+[2023-02-27 07:12:38,841][    INFO] Iters: 200, Total loss: 0.101, Loss x: 0.179, Loss s: 0.028, Loss w_fp: 0.017, Mask: 0.991
+[2023-02-27 07:13:11,114][    INFO] Iters: 250, Total loss: 0.094, Loss x: 0.168, Loss s: 0.026, Loss w_fp: 0.015, Mask: 0.986
+[2023-02-27 07:13:43,418][    INFO] Iters: 300, Total loss: 0.090, Loss x: 0.160, Loss s: 0.025, Loss w_fp: 0.014, Mask: 0.984
+[2023-02-27 07:14:15,737][    INFO] Iters: 350, Total loss: 0.086, Loss x: 0.153, Loss s: 0.025, Loss w_fp: 0.012, Mask: 0.982
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9982), 'Precision': tensor(0.), 'Recall': tensor(1), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9982)}
+{'Accuracy': tensor(0.9948), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9948)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9724), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9724)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9717), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9717)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.6715), 'Precision': tensor(0.9981), 'Recall': tensor(0.0241), 'F1_score': tensor(0.0471), 'change_IOU': tensor(0.0241), 'unchange_IOU': tensor(0.6689)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8808), 'Precision': tensor(1.), 'Recall': tensor(0.0150), 'F1_score': tensor(0.0296), 'change_IOU': tensor(0.0150), 'unchange_IOU': tensor(0.8806)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9748), 'Precision': tensor(1.), 'Recall': tensor(0.1189), 'F1_score': tensor(0.2126), 'change_IOU': tensor(0.1189), 'unchange_IOU': tensor(0.9747)}
+{'Accuracy': tensor(0.8105), 'Precision': tensor(0.9387), 'Recall': tensor(0.0714), 'F1_score': tensor(0.1327), 'change_IOU': tensor(0.0711), 'unchange_IOU': tensor(0.8077)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9114), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9114)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9944), 'Precision': tensor(0.), 'Recall': tensor(1), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9944)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8866), 'Precision': tensor(1.), 'Recall': tensor(0.0105), 'F1_score': tensor(0.0208), 'change_IOU': tensor(0.0105), 'unchange_IOU': tensor(0.8865)}
+{'Accuracy': tensor(0.8927), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8927)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9729), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9729)}
+{'Accuracy': tensor(0.9656), 'Precision': tensor(0.9053), 'Recall': tensor(0.2321), 'F1_score': tensor(0.3695), 'change_IOU': tensor(0.2266), 'unchange_IOU': tensor(0.9653)}
+{'Accuracy': tensor(0.9949), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9949)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.0000), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(1.0000)}
+{'Accuracy': tensor(0.9227), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9227)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9066), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9066)}
+{'Accuracy': tensor(0.9989), 'Precision': tensor(0.), 'Recall': tensor(1), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9989)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9117), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9117)}
+{'Accuracy': tensor(0.9981), 'Precision': tensor(0.), 'Recall': tensor(1), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9981)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.0000), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(1.0000)}
+{'Accuracy': tensor(0.9651), 'Precision': tensor(1.), 'Recall': tensor(0.0346), 'F1_score': tensor(0.0669), 'change_IOU': tensor(0.0346), 'unchange_IOU': tensor(0.9651)}
+{'Accuracy': tensor(0.8932), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8932)}
+{'Accuracy': tensor(0.9833), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9833)}
+{'Accuracy': tensor(0.9711), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9711)}
+{'Accuracy': tensor(0.8039), 'Precision': tensor(1.), 'Recall': tensor(0.0172), 'F1_score': tensor(0.0338), 'change_IOU': tensor(0.0172), 'unchange_IOU': tensor(0.8033)}
+{'Accuracy': tensor(0.9941), 'Precision': tensor(0.), 'Recall': tensor(1), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9941)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8586), 'Precision': tensor(1.), 'Recall': tensor(0.0073), 'F1_score': tensor(0.0145), 'change_IOU': tensor(0.0073), 'unchange_IOU': tensor(0.8585)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9785), 'Precision': tensor(0.5958), 'Recall': tensor(0.1348), 'F1_score': tensor(0.2199), 'change_IOU': tensor(0.1235), 'unchange_IOU': tensor(0.9784)}
+{'Accuracy': tensor(0.8701), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8701)}
+{'Accuracy': tensor(0.8809), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8809)}
+{'Accuracy': tensor(0.9557), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9557)}{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+
+{'Accuracy': tensor(0.9794), 'Precision': tensor(0.9568), 'Recall': tensor(0.2308), 'F1_score': tensor(0.3719), 'change_IOU': tensor(0.2284), 'unchange_IOU': tensor(0.9793)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9883), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9883)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9130), 'Precision': tensor(0.9973), 'Recall': tensor(0.1132), 'F1_score': tensor(0.2032), 'change_IOU': tensor(0.1131), 'unchange_IOU': tensor(0.9120)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9151), 'Precision': tensor(1.), 'Recall': tensor(0.0014), 'F1_score': tensor(0.0029), 'change_IOU': tensor(0.0014), 'unchange_IOU': tensor(0.9150)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9905), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9905)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9922), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9922)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9999), 'Precision': tensor(0.), 'Recall': tensor(1), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9999)}
+{'Accuracy': tensor(0.9934), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9934)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7645), 'Precision': tensor(1.), 'Recall': tensor(0.1749), 'F1_score': tensor(0.2977), 'change_IOU': tensor(0.1749), 'unchange_IOU': tensor(0.7521)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9959), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9959)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7920), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7920)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9604), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9604)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7422), 'Precision': tensor(1.), 'Recall': tensor(0.0122), 'F1_score': tensor(0.0241), 'change_IOU': tensor(0.0122), 'unchange_IOU': tensor(0.7414)}
+{'Accuracy': tensor(0.9873), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9873)}
+{'Accuracy': tensor(0.9036), 'Precision': tensor(1.), 'Recall': tensor(0.1237), 'F1_score': tensor(0.2201), 'change_IOU': tensor(0.1237), 'unchange_IOU': tensor(0.9022)}
+{'Accuracy': tensor(0.8097), 'Precision': tensor(1.), 'Recall': tensor(0.0817), 'F1_score': tensor(0.1511), 'change_IOU': tensor(0.0817), 'unchange_IOU': tensor(0.8064)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9022), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9022)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7206), 'Precision': tensor(1.), 'Recall': tensor(0.0389), 'F1_score': tensor(0.0750), 'change_IOU': tensor(0.0389), 'unchange_IOU': tensor(0.7174)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9416), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9416)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.6563), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.6563)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9673), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9673)}
+{'Accuracy': tensor(0.9521), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9521)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7315), 'Precision': tensor(0.9978), 'Recall': tensor(0.0708), 'F1_score': tensor(0.1322), 'change_IOU': tensor(0.0708), 'unchange_IOU': tensor(0.7259)}
+{'Accuracy': tensor(0.7927), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7927)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9398), 'Precision': tensor(0.9888), 'Recall': tensor(0.3312), 'F1_score': tensor(0.4962), 'change_IOU': tensor(0.3300), 'unchange_IOU': tensor(0.9380)}
+{'Accuracy': tensor(0.9369), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9369)}
+{'Accuracy': tensor(0.8875), 'Precision': tensor(0.9451), 'Recall': tensor(0.2404), 'F1_score': tensor(0.3834), 'change_IOU': tensor(0.2371), 'unchange_IOU': tensor(0.8835)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8869), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8869)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9653), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9653)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9994), 'Precision': tensor(0.), 'Recall': tensor(1), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9994)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7837), 'Precision': tensor(1.), 'Recall': tensor(0.0202), 'F1_score': tensor(0.0396), 'change_IOU': tensor(0.0202), 'unchange_IOU': tensor(0.7827)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9503), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9503)}
+{'Accuracy': tensor(0.9788), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9788)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9949), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9949)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8553), 'Precision': tensor(1.), 'Recall': tensor(0.0001), 'F1_score': tensor(0.0002), 'change_IOU': tensor(0.0001), 'unchange_IOU': tensor(0.8553)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.5882), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.5882)}
+{'Accuracy': tensor(0.9957), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9957)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9837), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9837)}
+{'Accuracy': tensor(0.9930), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9930)}
+{'Accuracy': tensor(0.9847), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9847)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7211), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7211)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7269), 'Precision': tensor(0.9552), 'Recall': tensor(0.0488), 'F1_score': tensor(0.0928), 'change_IOU': tensor(0.0487), 'unchange_IOU': tensor(0.7230)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9460), 'Precision': tensor(1.), 'Recall': tensor(0.0062), 'F1_score': tensor(0.0123), 'change_IOU': tensor(0.0062), 'unchange_IOU': tensor(0.9460)}
+{'Accuracy': tensor(0.9565), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9565)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9586), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9586)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9588), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9588)}
+{'Accuracy': tensor(0.7769), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7769)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9392), 'Precision': tensor(1.), 'Recall': tensor(0.1721), 'F1_score': tensor(0.2937), 'change_IOU': tensor(0.1721), 'unchange_IOU': tensor(0.9384)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9916), 'Precision': tensor(1.), 'Recall': tensor(0.2892), 'F1_score': tensor(0.4487), 'change_IOU': tensor(0.2892), 'unchange_IOU': tensor(0.9915)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9133), 'Precision': tensor(1.), 'Recall': tensor(0.0568), 'F1_score': tensor(0.1074), 'change_IOU': tensor(0.0568), 'unchange_IOU': tensor(0.9128)}
+{'Accuracy': tensor(0.8733), 'Precision': tensor(1.), 'Recall': tensor(0.0017), 'F1_score': tensor(0.0034), 'change_IOU': tensor(0.0017), 'unchange_IOU': tensor(0.8733)}
+{'Accuracy': tensor(0.8669), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8669)}
+{'Accuracy': tensor(0.9785), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9785)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9696), 'Precision': tensor(0.), 'Recall': tensor(0.), 'F1_score': tensor(0), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9696)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9013), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9013)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8778), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8778)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9771), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9771)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9788), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9788)}{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8654), 'Precision': tensor(1.), 'Recall': tensor(0.0149), 'F1_score': tensor(0.0293), 'change_IOU': tensor(0.0149), 'unchange_IOU': tensor(0.8651)}
+{'Accuracy': tensor(0.8655), 'Precision': tensor(1.), 'Recall': tensor(0.0142), 'F1_score': tensor(0.0280), 'change_IOU': tensor(0.0142), 'unchange_IOU': tensor(0.8653)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9443), 'Precision': tensor(0.9538), 'Recall': tensor(0.1290), 'F1_score': tensor(0.2273), 'change_IOU': tensor(0.1282), 'unchange_IOU': tensor(0.9438)}
+{'Accuracy': tensor(0.9998), 'Precision': tensor(0.), 'Recall': tensor(1), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9998)}
+{'Accuracy': tensor(0.9863), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9863)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9874), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9874)}
+{'Accuracy': tensor(0.9935), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9935)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8850), 'Precision': tensor(1.), 'Recall': tensor(0.0080), 'F1_score': tensor(0.0159), 'change_IOU': tensor(0.0080), 'unchange_IOU': tensor(0.8849)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9620), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9620)}
+{'Accuracy': tensor(0.8212), 'Precision': tensor(1.), 'Recall': tensor(0.0056), 'F1_score': tensor(0.0111), 'change_IOU': tensor(0.0056), 'unchange_IOU': tensor(0.8211)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9815), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9815)}
+{'Accuracy': tensor(0.7712), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7712)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8068), 'Precision': tensor(1.), 'Recall': tensor(0.0119), 'F1_score': tensor(0.0234), 'change_IOU': tensor(0.0119), 'unchange_IOU': tensor(0.8063)}
+{'Accuracy': tensor(0.7701), 'Precision': tensor(1.), 'Recall': tensor(0.0044), 'F1_score': tensor(0.0087), 'change_IOU': tensor(0.0044), 'unchange_IOU': tensor(0.7699)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9843), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9843)}
+{'Accuracy': tensor(0.9868), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9868)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9430), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9430)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9572), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9572)}
+{'Accuracy': tensor(0.9782), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9782)}
+{'Accuracy': tensor(0.7603), 'Precision': tensor(1.), 'Recall': tensor(0.0204), 'F1_score': tensor(0.0400), 'change_IOU': tensor(0.0204), 'unchange_IOU': tensor(0.7591)}
+{'Accuracy': tensor(0.9872), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9872)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9821), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9821)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9411), 'Precision': tensor(0.8424), 'Recall': tensor(0.0350), 'F1_score': tensor(0.0671), 'change_IOU': tensor(0.0347), 'unchange_IOU': tensor(0.9409)}
+{'Accuracy': tensor(0.9967), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9967)}
+{'Accuracy': tensor(0.9342), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9342)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9900), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9900)}
+{'Accuracy': tensor(0.9818), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9818)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.2952), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.2952)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9715), 'Precision': tensor(1.), 'Recall': tensor(0.0164), 'F1_score': tensor(0.0322), 'change_IOU': tensor(0.0164), 'unchange_IOU': tensor(0.9715)}
+{'Accuracy': tensor(0.9471), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9471)}
+{'Accuracy': tensor(0.9698), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9698)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+
+{'Accuracy': tensor(0.9834), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9834)}
+{'Accuracy': tensor(0.9508), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9508)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9648), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9648)}
+{'Accuracy': tensor(0.7106), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7106)}
+{'Accuracy': tensor(0.9826), 'Precision': tensor(0.9971), 'Recall': tensor(0.2339), 'F1_score': tensor(0.3789), 'change_IOU': tensor(0.2337), 'unchange_IOU': tensor(0.9825)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8339), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8339)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8526), 'Precision': tensor(1.), 'Recall': tensor(0.0003), 'F1_score': tensor(0.0006), 'change_IOU': tensor(0.0003), 'unchange_IOU': tensor(0.8526)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9923), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9923)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7968), 'Precision': tensor(0.9798), 'Recall': tensor(0.3300), 'F1_score': tensor(0.4937), 'change_IOU': tensor(0.3278), 'unchange_IOU': tensor(0.7745)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9027), 'Precision': tensor(0.9952), 'Recall': tensor(0.0608), 'F1_score': tensor(0.1147), 'change_IOU': tensor(0.0608), 'unchange_IOU': tensor(0.9021)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7373), 'Precision': tensor(1.), 'Recall': tensor(0.0027), 'F1_score': tensor(0.0054), 'change_IOU': tensor(0.0027), 'unchange_IOU': tensor(0.7371)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9675), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9675)}
+{'Accuracy': tensor(0.9839), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9839)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9941), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9941)}
+{'Accuracy': tensor(0.8912), 'Precision': tensor(1.), 'Recall': tensor(0.0540), 'F1_score': tensor(0.1025), 'change_IOU': tensor(0.0540), 'unchange_IOU': tensor(0.8905)}
+{'Accuracy': tensor(0.6872), 'Precision': tensor(0.9748), 'Recall': tensor(0.0149), 'F1_score': tensor(0.0294), 'change_IOU': tensor(0.0149), 'unchange_IOU': tensor(0.6857)}
+{'Accuracy': tensor(0.9139), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9139)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9538), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9538)}
+{'Accuracy': tensor(0.7491), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7491)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9987), 'Precision': tensor(0.), 'Recall': tensor(1), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9987)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9915), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9915)}
+{'Accuracy': tensor(0.9660), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9660)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9907), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9907)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8452), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8452)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9857), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9857)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9314), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9314)}
+{'Accuracy': tensor(0.9514), 'Precision': tensor(1.), 'Recall': tensor(0.0421), 'F1_score': tensor(0.0808), 'change_IOU': tensor(0.0421), 'unchange_IOU': tensor(0.9513)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9536), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9536)}
+{'Accuracy': tensor(0.9822), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9822)}
+{'Accuracy': tensor(0.9455), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9455)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9869), 'Precision': tensor(1.), 'Recall': tensor(0.0271), 'F1_score': tensor(0.0529), 'change_IOU': tensor(0.0271), 'unchange_IOU': tensor(0.9869)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9916), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9916)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9934), 'Precision': tensor(0.), 'Recall': tensor(1), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9934)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9663), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9663)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7018), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7018)}
+{'Accuracy': tensor(0.8896), 'Precision': tensor(1.), 'Recall': tensor(0.0171), 'F1_score': tensor(0.0337), 'change_IOU': tensor(0.0171), 'unchange_IOU': tensor(0.8894)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9890), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9890)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9724), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9724)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9901), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9901)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9933), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9933)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7933), 'Precision': tensor(1.), 'Recall': tensor(0.0112), 'F1_score': tensor(0.0221), 'change_IOU': tensor(0.0112), 'unchange_IOU': tensor(0.7928)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9959), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9959)}
+{'Accuracy': tensor(0.9942), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9942)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9340), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9340)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9803), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9803)}
+{'Accuracy': tensor(0.6538), 'Precision': tensor(0.1600), 'Recall': tensor(0.0002), 'F1_score': tensor(0.0004), 'change_IOU': tensor(0.0002), 'unchange_IOU': tensor(0.6538)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9119), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9119)}
+{'Accuracy': tensor(0.9104), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9104)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9140), 'Precision': tensor(0.), 'Recall': tensor(0.), 'F1_score': tensor(0), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9140)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8892), 'Precision': tensor(0.9484), 'Recall': tensor(0.2123), 'F1_score': tensor(0.3469), 'change_IOU': tensor(0.2099), 'unchange_IOU': tensor(0.8858)}
+{'Accuracy': tensor(0.9988), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9988)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9907), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9907)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9998), 'Precision': tensor(0.), 'Recall': tensor(1), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9998)}
+{'Accuracy': tensor(0.9610), 'Precision': tensor(0.3409), 'Recall': tensor(0.0427), 'F1_score': tensor(0.0759), 'change_IOU': tensor(0.0394), 'unchange_IOU': tensor(0.9609)}
+{'Accuracy': tensor(0.9420), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9420)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7866), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7866)}
+{'Accuracy': tensor(0.9993), 'Precision': tensor(0.), 'Recall': tensor(1), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9993)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7654), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7654)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7841), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7841)}
+{'Accuracy': tensor(0.9050), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9050)}
+{'Accuracy': tensor(0.6816), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.6816)}
+{'Accuracy': tensor(0.9591), 'Precision': tensor(0.9681), 'Recall': tensor(0.0927), 'F1_score': tensor(0.1692), 'change_IOU': tensor(0.0924), 'unchange_IOU': tensor(0.9589)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8479), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8479)}
+{'Accuracy': tensor(0.7910), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7910)}
+{'Accuracy': tensor(0.8996), 'Precision': tensor(1.), 'Recall': tensor(0.0248), 'F1_score': tensor(0.0483), 'change_IOU': tensor(0.0248), 'unchange_IOU': tensor(0.8994)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9798), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9798)}
+{'Accuracy': tensor(0.9984), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9984)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8112), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8112)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.6320), 'Precision': tensor(1.), 'Recall': tensor(0.0006), 'F1_score': tensor(0.0012), 'change_IOU': tensor(0.0006), 'unchange_IOU': tensor(0.6320)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9471), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9471)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9241), 'Precision': tensor(0.8517), 'Recall': tensor(0.1534), 'F1_score': tensor(0.2599), 'change_IOU': tensor(0.1494), 'unchange_IOU': tensor(0.9231)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7869), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7869)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8799), 'Precision': tensor(1.), 'Recall': tensor(0.0009), 'F1_score': tensor(0.0018), 'change_IOU': tensor(0.0009), 'unchange_IOU': tensor(0.8798)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9818), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9818)}
+{'Accuracy': tensor(0.8422), 'Precision': tensor(1.), 'Recall': tensor(0.0316), 'F1_score': tensor(0.0613), 'change_IOU': tensor(0.0316), 'unchange_IOU': tensor(0.8414)}
+{'Accuracy': tensor(0.9991), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9991)}
+{'Accuracy': tensor(0.9412), 'Precision': tensor(0.9786), 'Recall': tensor(0.2152), 'F1_score': tensor(0.3529), 'change_IOU': tensor(0.2142), 'unchange_IOU': tensor(0.9402)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9989), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9989)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9544), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9544)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9688), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9688)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7567), 'Precision': tensor(0.8919), 'Recall': tensor(0.2452), 'F1_score': tensor(0.3846), 'change_IOU': tensor(0.2381), 'unchange_IOU': tensor(0.7367)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9996), 'Precision': tensor(0.), 'Recall': tensor(1), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9996)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9437), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9437)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+
+{'Accuracy': tensor(0.8877), 'Precision': tensor(0.), 'Recall': tensor(0.), 'F1_score': tensor(0), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8877)}{'Accuracy': tensor(0.8109), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8109)}
+
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8442), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8442)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9894), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9894)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9588), 'Precision': tensor(1.), 'Recall': tensor(0.0015), 'F1_score': tensor(0.0030), 'change_IOU': tensor(0.0015), 'unchange_IOU': tensor(0.9588)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9996), 'Precision': tensor(0.), 'Recall': tensor(1), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9996)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7157), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7157)}
+{'Accuracy': tensor(0.9982), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9982)}
+{'Accuracy': tensor(0.8047), 'Precision': tensor(1.), 'Recall': tensor(0.0023), 'F1_score': tensor(0.0045), 'change_IOU': tensor(0.0023), 'unchange_IOU': tensor(0.8046)}
+{'Accuracy': tensor(0.7696), 'Precision': tensor(1.), 'Recall': tensor(0.0358), 'F1_score': tensor(0.0692), 'change_IOU': tensor(0.0358), 'unchange_IOU': tensor(0.7676)}
+{'Accuracy': tensor(0.7775), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7775)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.6851), 'Precision': tensor(1.), 'Recall': tensor(0.0303), 'F1_score': tensor(0.0588), 'change_IOU': tensor(0.0303), 'unchange_IOU': tensor(0.6819)}
+{'Accuracy': tensor(0.7221), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7221)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7705), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7705)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9313), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9313)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9937), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9937)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+
+{'Accuracy': tensor(0.9075), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9075)}
+{'Accuracy': tensor(0.7417), 'Precision': tensor(1.), 'Recall': tensor(0.0011), 'F1_score': tensor(0.0022), 'change_IOU': tensor(0.0011), 'unchange_IOU': tensor(0.7416)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7615), 'Precision': tensor(1.), 'Recall': tensor(0.0081), 'F1_score': tensor(0.0160), 'change_IOU': tensor(0.0081), 'unchange_IOU': tensor(0.7611)}
+{'Accuracy': tensor(0.9432), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9432)}
+{'Accuracy': tensor(0.9244), 'Precision': tensor(1.), 'Recall': tensor(0.0002), 'F1_score': tensor(0.0004), 'change_IOU': tensor(0.0002), 'unchange_IOU': tensor(0.9244)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9593), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9593)}
+{'Accuracy': tensor(0.9972), 'Precision': tensor(0.), 'Recall': tensor(1), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9972)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9975), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9975)}
+{'Accuracy': tensor(0.9857), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9857)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9292), 'Precision': tensor(1.), 'Recall': tensor(0.1248), 'F1_score': tensor(0.2219), 'change_IOU': tensor(0.1248), 'unchange_IOU': tensor(0.9284)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8062), 'Precision': tensor(1.), 'Recall': tensor(0.0095), 'F1_score': tensor(0.0188), 'change_IOU': tensor(0.0095), 'unchange_IOU': tensor(0.8058)}
+{'Accuracy': tensor(0.9581), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9581)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9574), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9574)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9507), 'Precision': tensor(1.), 'Recall': tensor(0.0292), 'F1_score': tensor(0.0567), 'change_IOU': tensor(0.0292), 'unchange_IOU': tensor(0.9506)}
+{'Accuracy': tensor(0.9974), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9974)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8095), 'Precision': tensor(0.9083), 'Recall': tensor(0.1479), 'F1_score': tensor(0.2543), 'change_IOU': tensor(0.1457), 'unchange_IOU': tensor(0.8031)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9991), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9991)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8221), 'Precision': tensor(0.9921), 'Recall': tensor(0.2443), 'F1_score': tensor(0.3921), 'change_IOU': tensor(0.2439), 'unchange_IOU': tensor(0.8113)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7487), 'Precision': tensor(1.), 'Recall': tensor(0.0032), 'F1_score': tensor(0.0064), 'change_IOU': tensor(0.0032), 'unchange_IOU': tensor(0.7485)}
+{'Accuracy': tensor(0.9678), 'Precision': tensor(1.), 'Recall': tensor(0.0920), 'F1_score': tensor(0.1686), 'change_IOU': tensor(0.0920), 'unchange_IOU': tensor(0.9677)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9944), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9944)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9472), 'Precision': tensor(1.), 'Recall': tensor(0.0313), 'F1_score': tensor(0.0608), 'change_IOU': tensor(0.0313), 'unchange_IOU': tensor(0.9471)}
+{'Accuracy': tensor(0.9983), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9983)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9220), 'Precision': tensor(0.), 'Recall': tensor(0.), 'F1_score': tensor(0), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9220)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9755), 'Precision': tensor(1.), 'Recall': tensor(0.1521), 'F1_score': tensor(0.2640), 'change_IOU': tensor(0.1521), 'unchange_IOU': tensor(0.9754)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9043), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9043)}
+{'Accuracy': tensor(0.9984), 'Precision': tensor(0.), 'Recall': tensor(1), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9984)}
+{'Accuracy': tensor(0.9794), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9794)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9766), 'Precision': tensor(1.), 'Recall': tensor(0.0142), 'F1_score': tensor(0.0279), 'change_IOU': tensor(0.0142), 'unchange_IOU': tensor(0.9766)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9671), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9671)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9963), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9963)}
+{'Accuracy': tensor(0.8168), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8168)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8385), 'Precision': tensor(1.), 'Recall': tensor(0.0068), 'F1_score': tensor(0.0134), 'change_IOU': tensor(0.0068), 'unchange_IOU': tensor(0.8383)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9620), 'Precision': tensor(0.9513), 'Recall': tensor(0.2421), 'F1_score': tensor(0.3860), 'change_IOU': tensor(0.2391), 'unchange_IOU': tensor(0.9616)}
+{'Accuracy': tensor(0.9896), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9896)}
+{'Accuracy': tensor(0.9953), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9953)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9792), 'Precision': tensor(1.), 'Recall': tensor(0.0395), 'F1_score': tensor(0.0759), 'change_IOU': tensor(0.0395), 'unchange_IOU': tensor(0.9792)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9816), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9816)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8180), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8180)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9686), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9686)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9777), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9777)}
+{'Accuracy': tensor(0.9999), 'Precision': tensor(0.), 'Recall': tensor(1), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9999)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9112), 'Precision': tensor(1.), 'Recall': tensor(0.0058), 'F1_score': tensor(0.0115), 'change_IOU': tensor(0.0058), 'unchange_IOU': tensor(0.9111)}
+{'Accuracy': tensor(0.7784), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7784)}
+{'Accuracy': tensor(0.9298), 'Precision': tensor(1.), 'Recall': tensor(0.0838), 'F1_score': tensor(0.1546), 'change_IOU': tensor(0.0838), 'unchange_IOU': tensor(0.9293)}
+{'Accuracy': tensor(0.9783), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9783)}
+{'Accuracy': tensor(0.8990), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8990)}
+{'Accuracy': tensor(0.9658), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9658)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9562), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9562)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9026), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9026)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9098), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9098)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9871), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9871)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9699), 'Precision': tensor(1.), 'Recall': tensor(0.0510), 'F1_score': tensor(0.0971), 'change_IOU': tensor(0.0510), 'unchange_IOU': tensor(0.9699)}
+{'Accuracy': tensor(0.8714), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8714)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9938), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9938)}
+{'Accuracy': tensor(0.9757), 'Precision': tensor(1.), 'Recall': tensor(0.0651), 'F1_score': tensor(0.1222), 'change_IOU': tensor(0.0651), 'unchange_IOU': tensor(0.9756)}
+{'Accuracy': tensor(0.9925), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9925)}
+{'Accuracy': tensor(0.9943), 'Precision': tensor(0.), 'Recall': tensor(0.), 'F1_score': tensor(0), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9943)}
+{'Accuracy': tensor(0.9930), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9930)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.0000), 'Precision': tensor(0.), 'Recall': tensor(1), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(1.0000)}
+{'Accuracy': tensor(0.9142), 'Precision': tensor(0.9966), 'Recall': tensor(0.0939), 'F1_score': tensor(0.1717), 'change_IOU': tensor(0.0939), 'unchange_IOU': tensor(0.9134)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9256), 'Precision': tensor(1.), 'Recall': tensor(0.0051), 'F1_score': tensor(0.0102), 'change_IOU': tensor(0.0051), 'unchange_IOU': tensor(0.9256)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7781), 'Precision': tensor(0.9945), 'Recall': tensor(0.2584), 'F1_score': tensor(0.4102), 'change_IOU': tensor(0.2580), 'unchange_IOU': tensor(0.7595)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9996), 'Precision': tensor(0.), 'Recall': tensor(1), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9996)}
+{'Accuracy': tensor(0.9664), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9664)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7687), 'Precision': tensor(1.), 'Recall': tensor(0.0112), 'F1_score': tensor(0.0222), 'change_IOU': tensor(0.0112), 'unchange_IOU': tensor(0.7681)}
+{'Accuracy': tensor(0.9815), 'Precision': tensor(1.), 'Recall': tensor(0.0327), 'F1_score': tensor(0.0633), 'change_IOU': tensor(0.0327), 'unchange_IOU': tensor(0.9815)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9535), 'Precision': tensor(1.), 'Recall': tensor(0.1717), 'F1_score': tensor(0.2931), 'change_IOU': tensor(0.1717), 'unchange_IOU': tensor(0.9530)}
+{'Accuracy': tensor(0.9137), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9137)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9801), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9801)}
+{'Accuracy': tensor(0.9850), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9850)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8254), 'Precision': tensor(0.9741), 'Recall': tensor(0.3210), 'F1_score': tensor(0.4829), 'change_IOU': tensor(0.3183), 'unchange_IOU': tensor(0.8099)}
+{'Accuracy': tensor(0.9245), 'Precision': tensor(0.8232), 'Recall': tensor(0.0794), 'F1_score': tensor(0.1448), 'change_IOU': tensor(0.0780), 'unchange_IOU': tensor(0.9240)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9445), 'Precision': tensor(0.9739), 'Recall': tensor(0.0299), 'F1_score': tensor(0.0580), 'change_IOU': tensor(0.0299), 'unchange_IOU': tensor(0.9444)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7864), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7864)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9970), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9970)}
+{'Accuracy': tensor(0.9149), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9149)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9902), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9902)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9133), 'Precision': tensor(1.), 'Recall': tensor(0.0239), 'F1_score': tensor(0.0467), 'change_IOU': tensor(0.0239), 'unchange_IOU': tensor(0.9132)}
+{'Accuracy': tensor(0.9203), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9203)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9986), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9986)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9750), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9750)}
+{'Accuracy': tensor(0.7726), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7726)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8839), 'Precision': tensor(1.), 'Recall': tensor(0.0426), 'F1_score': tensor(0.0818), 'change_IOU': tensor(0.0426), 'unchange_IOU': tensor(0.8832)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9541), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9541)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8720), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8720)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8500), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8500)}
+{'Accuracy': tensor(0.9921), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9921)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9571), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9571)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9972), 'Precision': tensor(0.), 'Recall': tensor(1), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9972)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9933), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9933)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9635), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9635)}
+{'Accuracy': tensor(0.9547), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9547)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9246), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9246)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.6324), 'Precision': tensor(1.), 'Recall': tensor(0.0005), 'F1_score': tensor(0.0009), 'change_IOU': tensor(0.0005), 'unchange_IOU': tensor(0.6323)}
+{'Accuracy': tensor(0.9816), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9816)}
+{'Accuracy': tensor(0.8963), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8963)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9622), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9622)}
+{'Accuracy': tensor(0.8931), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8931)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9970), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9970)}
+{'Accuracy': tensor(0.7853), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7853)}
+{'Accuracy': tensor(0.8341), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8341)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9591), 'Precision': tensor(0.5133), 'Recall': tensor(0.0287), 'F1_score': tensor(0.0544), 'change_IOU': tensor(0.0279), 'unchange_IOU': tensor(0.9591)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9796), 'Precision': tensor(1.), 'Recall': tensor(0.1776), 'F1_score': tensor(0.3016), 'change_IOU': tensor(0.1776), 'unchange_IOU': tensor(0.9796)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9992), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9992)}
+{'Accuracy': tensor(0.9773), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9773)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9592), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9592)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9890), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9890)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7892), 'Precision': tensor(1.), 'Recall': tensor(0.0127), 'F1_score': tensor(0.0251), 'change_IOU': tensor(0.0127), 'unchange_IOU': tensor(0.7886)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9979), 'Precision': tensor(0.), 'Recall': tensor(1), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9979)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7430), 'Precision': tensor(1.), 'Recall': tensor(0.0123), 'F1_score': tensor(0.0243), 'change_IOU': tensor(0.0123), 'unchange_IOU': tensor(0.7422)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9936), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9936)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9712), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9712)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9597), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9597)}
+{'Accuracy': tensor(0.8814), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8814)}
+{'Accuracy': tensor(0.8112), 'Precision': tensor(1.), 'Recall': tensor(0.0569), 'F1_score': tensor(0.1076), 'change_IOU': tensor(0.0569), 'unchange_IOU': tensor(0.8091)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7321), 'Precision': tensor(1.), 'Recall': tensor(0.0161), 'F1_score': tensor(0.0317), 'change_IOU': tensor(0.0161), 'unchange_IOU': tensor(0.7309)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.5975), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.5975)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8617), 'Precision': tensor(1.), 'Recall': tensor(0.0046), 'F1_score': tensor(0.0092), 'change_IOU': tensor(0.0046), 'unchange_IOU': tensor(0.8616)}
+{'Accuracy': tensor(0.8392), 'Precision': tensor(0.9871), 'Recall': tensor(0.1792), 'F1_score': tensor(0.3033), 'change_IOU': tensor(0.1788), 'unchange_IOU': tensor(0.8334)}
+{'Accuracy': tensor(0.8790), 'Precision': tensor(0.9667), 'Recall': tensor(0.0963), 'F1_score': tensor(0.1752), 'change_IOU': tensor(0.0960), 'unchange_IOU': tensor(0.8774)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9373), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9373)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8619), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8619)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9800), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9800)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8211), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8211)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9184), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9184)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8329), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8329)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9056), 'Precision': tensor(1.), 'Recall': tensor(0.0186), 'F1_score': tensor(0.0364), 'change_IOU': tensor(0.0186), 'unchange_IOU': tensor(0.9054)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8173), 'Precision': tensor(1.), 'Recall': tensor(0.0372), 'F1_score': tensor(0.0718), 'change_IOU': tensor(0.0372), 'unchange_IOU': tensor(0.8160)}
+{'Accuracy': tensor(0.7510), 'Precision': tensor(1.), 'Recall': tensor(0.0087), 'F1_score': tensor(0.0173), 'change_IOU': tensor(0.0087), 'unchange_IOU': tensor(0.7505)}
+{'Accuracy': tensor(0.9963), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9963)}
+{'Accuracy': tensor(0.7552), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7552)}
+{'Accuracy': tensor(0.9954), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9954)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7386), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7386)}
+{'Accuracy': tensor(0.7000), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7000)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9358), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9358)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}{'Accuracy': tensor(0.9292), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9292)}
+
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8266), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8266)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9970), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9970)}
+{'Accuracy': tensor(0.9753), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9753)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7187), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7187)}
+{'Accuracy': tensor(0.9164), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9164)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7580), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7580)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9937), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9937)}
+{'Accuracy': tensor(0.9967), 'Precision': tensor(0.), 'Recall': tensor(1), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9967)}
+{'Accuracy': tensor(0.8824), 'Precision': tensor(1.), 'Recall': tensor(0.0059), 'F1_score': tensor(0.0118), 'change_IOU': tensor(0.0059), 'unchange_IOU': tensor(0.8823)}
+{'Accuracy': tensor(0.8528), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8528)}
+{'Accuracy': tensor(0.8991), 'Precision': tensor(1.), 'Recall': tensor(0.0038), 'F1_score': tensor(0.0075), 'change_IOU': tensor(0.0038), 'unchange_IOU': tensor(0.8991)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7787), 'Precision': tensor(0.4878), 'Recall': tensor(0.0014), 'F1_score': tensor(0.0028), 'change_IOU': tensor(0.0014), 'unchange_IOU': tensor(0.7787)}
+{'Accuracy': tensor(0.8904), 'Precision': tensor(1.), 'Recall': tensor(0.1511), 'F1_score': tensor(0.2626), 'change_IOU': tensor(0.1511), 'unchange_IOU': tensor(0.8882)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9694), 'Precision': tensor(1.), 'Recall': tensor(0.0959), 'F1_score': tensor(0.1750), 'change_IOU': tensor(0.0959), 'unchange_IOU': tensor(0.9693)}
+{'Accuracy': tensor(0.9015), 'Precision': tensor(1.), 'Recall': tensor(0.0258), 'F1_score': tensor(0.0503), 'change_IOU': tensor(0.0258), 'unchange_IOU': tensor(0.9012)}
+{'Accuracy': tensor(0.9949), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9949)}
+{'Accuracy': tensor(0.9744), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9744)}
+{'Accuracy': tensor(0.8887), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8887)}
+{'Accuracy': tensor(0.9905), 'Precision': tensor(1.), 'Recall': tensor(0.1631), 'F1_score': tensor(0.2804), 'change_IOU': tensor(0.1631), 'unchange_IOU': tensor(0.9905)}
+{'Accuracy': tensor(0.8982), 'Precision': tensor(0.8484), 'Recall': tensor(0.0575), 'F1_score': tensor(0.1078), 'change_IOU': tensor(0.0569), 'unchange_IOU': tensor(0.8975)}
+{'Accuracy': tensor(0.9677), 'Precision': tensor(1.), 'Recall': tensor(0.1544), 'F1_score': tensor(0.2675), 'change_IOU': tensor(0.1544), 'unchange_IOU': tensor(0.9675)}
+{'Accuracy': tensor(0.8883), 'Precision': tensor(0.7758), 'Recall': tensor(0.0232), 'F1_score': tensor(0.0451), 'change_IOU': tensor(0.0231), 'unchange_IOU': tensor(0.8880)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9700), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9700)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9771), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9771)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7464), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7464)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9457), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9457)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9710), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9710)}
+{'Accuracy': tensor(0.9011), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9011)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9276), 'Precision': tensor(1.), 'Recall': tensor(0.0186), 'F1_score': tensor(0.0366), 'change_IOU': tensor(0.0186), 'unchange_IOU': tensor(0.9275)}
+{'Accuracy': tensor(0.9620), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9620)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9379), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9379)}
+{'Accuracy': tensor(0.9145), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9145)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9092), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9092)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7702), 'Precision': tensor(1.), 'Recall': tensor(0.0202), 'F1_score': tensor(0.0397), 'change_IOU': tensor(0.0202), 'unchange_IOU': tensor(0.7692)}{'Accuracy': tensor(0.6412), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.6412)}
+
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.6536), 'Precision': tensor(1.), 'Recall': tensor(0.0017), 'F1_score': tensor(0.0034), 'change_IOU': tensor(0.0017), 'unchange_IOU': tensor(0.6534)}
+{'Accuracy': tensor(0.9041), 'Precision': tensor(1.), 'Recall': tensor(0.0922), 'F1_score': tensor(0.1688), 'change_IOU': tensor(0.0922), 'unchange_IOU': tensor(0.9032)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9900), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9900)}
+{'Accuracy': tensor(0.9841), 'Precision': tensor(1.), 'Recall': tensor(0.0114), 'F1_score': tensor(0.0226), 'change_IOU': tensor(0.0114), 'unchange_IOU': tensor(0.9841)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9947), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9947)}
+{'Accuracy': tensor(0.8868), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8868)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9704), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9704)}
+{'Accuracy': tensor(0.9370), 'Precision': tensor(1.), 'Recall': tensor(0.0190), 'F1_score': tensor(0.0373), 'change_IOU': tensor(0.0190), 'unchange_IOU': tensor(0.9369)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9678), 'Precision': tensor(1.), 'Recall': tensor(0.0254), 'F1_score': tensor(0.0495), 'change_IOU': tensor(0.0254), 'unchange_IOU': tensor(0.9677)}
+{'Accuracy': tensor(0.9378), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9378)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9110), 'Precision': tensor(1.), 'Recall': tensor(0.0494), 'F1_score': tensor(0.0941), 'change_IOU': tensor(0.0494), 'unchange_IOU': tensor(0.9106)}
+{'Accuracy': tensor(0.9905), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9905)}
+{'Accuracy': tensor(0.9873), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9873)}
+{'Accuracy': tensor(0.8672), 'Precision': tensor(1.), 'Recall': tensor(0.1043), 'F1_score': tensor(0.1889), 'change_IOU': tensor(0.1043), 'unchange_IOU': tensor(0.8651)}
+{'Accuracy': tensor(0.9521), 'Precision': tensor(1.), 'Recall': tensor(0.0290), 'F1_score': tensor(0.0565), 'change_IOU': tensor(0.0290), 'unchange_IOU': tensor(0.9520)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8177), 'Precision': tensor(0.9995), 'Recall': tensor(0.1397), 'F1_score': tensor(0.2452), 'change_IOU': tensor(0.1397), 'unchange_IOU': tensor(0.8122)}
+{'Accuracy': tensor(0.7012), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7012)}
+{'Accuracy': tensor(0.7838), 'Precision': tensor(1.), 'Recall': tensor(0.0076), 'F1_score': tensor(0.0150), 'change_IOU': tensor(0.0076), 'unchange_IOU': tensor(0.7834)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9516), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9516)}
+{'Accuracy': tensor(0.8390), 'Precision': tensor(0.9424), 'Recall': tensor(0.0517), 'F1_score': tensor(0.0980), 'change_IOU': tensor(0.0515), 'unchange_IOU': tensor(0.8376)}
+{'Accuracy': tensor(0.7426), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7426)}
+{'Accuracy': tensor(0.8073), 'Precision': tensor(1.), 'Recall': tensor(0.0098), 'F1_score': tensor(0.0194), 'change_IOU': tensor(0.0098), 'unchange_IOU': tensor(0.8069)}
+{'Accuracy': tensor(0.9657), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9657)}
+{'Accuracy': tensor(0.9139), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9139)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9191), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9191)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8935), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8935)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7478), 'Precision': tensor(1.), 'Recall': tensor(0.0068), 'F1_score': tensor(0.0135), 'change_IOU': tensor(0.0068), 'unchange_IOU': tensor(0.7474)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9974), 'Precision': tensor(0.), 'Recall': tensor(1), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9974)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7156), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7156)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9999), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9999)}
+{'Accuracy': tensor(0.9831), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9831)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8972), 'Precision': tensor(1.), 'Recall': tensor(0.0178), 'F1_score': tensor(0.0350), 'change_IOU': tensor(0.0178), 'unchange_IOU': tensor(0.8970)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8825), 'Precision': tensor(0.3464), 'Recall': tensor(0.0069), 'F1_score': tensor(0.0136), 'change_IOU': tensor(0.0068), 'unchange_IOU': tensor(0.8824)}
+{'Accuracy': tensor(0.9720), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9720)}
+{'Accuracy': tensor(0.9497), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9497)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9626), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9626)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9813), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9813)}
+{'Accuracy': tensor(0.9984), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9984)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9966), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9966)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9996), 'Precision': tensor(0.), 'Recall': tensor(1), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9996)}
+{'Accuracy': tensor(0.7698), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7698)}
+{'Accuracy': tensor(0.9059), 'Precision': tensor(1.), 'Recall': tensor(0.0939), 'F1_score': tensor(0.1717), 'change_IOU': tensor(0.0939), 'unchange_IOU': tensor(0.9050)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8396), 'Precision': tensor(1.), 'Recall': tensor(0.0073), 'F1_score': tensor(0.0144), 'change_IOU': tensor(0.0073), 'unchange_IOU': tensor(0.8394)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9930), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9930)}
+{'Accuracy': tensor(0.9461), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9461)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9983), 'Precision': tensor(0.), 'Recall': tensor(1), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9983)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.8728), 'Precision': tensor(1.), 'Recall': tensor(0.0100), 'F1_score': tensor(0.0197), 'change_IOU': tensor(0.0100), 'unchange_IOU': tensor(0.8726)}
+{'Accuracy': tensor(0.9934), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9934)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9364), 'Precision': tensor(0.8500), 'Recall': tensor(0.0041), 'F1_score': tensor(0.0081), 'change_IOU': tensor(0.0041), 'unchange_IOU': tensor(0.9364)}
+{'Accuracy': tensor(0.8374), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8374)}
+{'Accuracy': tensor(0.9446), 'Precision': tensor(1.), 'Recall': tensor(0.0327), 'F1_score': tensor(0.0634), 'change_IOU': tensor(0.0327), 'unchange_IOU': tensor(0.9445)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9722), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9722)}
+{'Accuracy': tensor(0.7578), 'Precision': tensor(1.), 'Recall': tensor(0.0181), 'F1_score': tensor(0.0356), 'change_IOU': tensor(0.0181), 'unchange_IOU': tensor(0.7567)}
+{'Accuracy': tensor(0.7523), 'Precision': tensor(1.), 'Recall': tensor(0.0060), 'F1_score': tensor(0.0119), 'change_IOU': tensor(0.0060), 'unchange_IOU': tensor(0.7519)}
+{'Accuracy': tensor(0.9855), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9855)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.7632), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.7632)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9272), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9272)}
+{'Accuracy': tensor(0.9777), 'Precision': tensor(1.), 'Recall': tensor(0.1459), 'F1_score': tensor(0.2546), 'change_IOU': tensor(0.1459), 'unchange_IOU': tensor(0.9776)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9864), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9864)}
+{'Accuracy': tensor(0.9648), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9648)}
+{'Accuracy': tensor(0.9855), 'Precision': tensor(1.), 'Recall': tensor(0.1998), 'F1_score': tensor(0.3331), 'change_IOU': tensor(0.1998), 'unchange_IOU': tensor(0.9855)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9960), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9960)}
+{'Accuracy': tensor(0.8705), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.8705)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9994), 'Precision': tensor(0.), 'Recall': tensor(1), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9994)}
+{'Accuracy': tensor(0.9536), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9536)}
+{'Accuracy': tensor(0.7784), 'Precision': tensor(1.), 'Recall': tensor(0.0100), 'F1_score': tensor(0.0198), 'change_IOU': tensor(0.0100), 'unchange_IOU': tensor(0.7779)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9078), 'Precision': tensor(1.), 'Recall': tensor(0.0270), 'F1_score': tensor(0.0527), 'change_IOU': tensor(0.0270), 'unchange_IOU': tensor(0.9075)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.9415), 'Precision': tensor(1), 'Recall': tensor(0.), 'F1_score': tensor(0.), 'change_IOU': tensor(0.), 'unchange_IOU': tensor(0.9415)}
+{'Accuracy': tensor(1.), 'Precision': tensor(1), 'Recall': tensor(1), 'F1_score': tensor(1.), 'change_IOU': tensor(1), 'unchange_IOU': tensor(1.)}
+{'Accuracy': tensor(0.6977), 'Precision': tensor(0.9494), 'Recall': tensor(0.1186), 'F1_score': tensor(0.2109), 'change_IOU': tensor(0.1179), 'unchange_IOU': tensor(0.6850)}
+[2023-02-27 07:14:57,183][    INFO] ***** Evaluation original ***** >>>> meanIOU: -63070599164460802048.00 IOU1: -126141198328921604096.00, IOU1: 191.79,                         Accuracy: 191.83, Recall: 1621787614552567.75, Precision: 1044548728865491.62, F1: 5241241712.89
+
+[2023-02-27 07:14:57,184][    INFO] ===========> Epoch: 1, LR: 0.0099, Previous best: 0.00
+[2023-02-27 07:14:58,287][    INFO] Iters: 0, Total loss: 0.072, Loss x: 0.128, Loss s: 0.024, Loss w_fp: 0.006, Mask: 0.993
+[2023-02-27 07:15:30,506][    INFO] Iters: 50, Total loss: 0.068, Loss x: 0.115, Loss s: 0.030, Loss w_fp: 0.013, Mask: 0.967
+[2023-02-27 07:16:02,660][    INFO] Iters: 100, Total loss: 0.065, Loss x: 0.110, Loss s: 0.027, Loss w_fp: 0.013, Mask: 0.971
+[2023-02-27 07:16:34,827][    INFO] Iters: 150, Total loss: 0.065, Loss x: 0.108, Loss s: 0.029, Loss w_fp: 0.013, Mask: 0.968
+[2023-02-27 07:17:06,990][    INFO] Iters: 200, Total loss: 0.063, Loss x: 0.105, Loss s: 0.030, Loss w_fp: 0.013, Mask: 0.969
+[2023-02-27 07:17:39,124][    INFO] Iters: 250, Total loss: 0.063, Loss x: 0.102, Loss s: 0.033, Loss w_fp: 0.014, Mask: 0.969
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 2522878 closing signal SIGTERM
+ERROR:torch.distributed.elastic.multiprocessing.api:failed (exitcode: -9) local_rank: 0 (pid: 2522877) of binary: /data/home/jinjuncan/miniconda3/envs/gcc9/bin/python
+Traceback (most recent call last):
+  File "/data/home/jinjuncan/miniconda3/envs/gcc9/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/data/home/jinjuncan/miniconda3/envs/gcc9/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/data/home/jinjuncan/miniconda3/envs/gcc9/lib/python3.7/site-packages/torch/distributed/launch.py", line 195, in <module>
+    main()
+  File "/data/home/jinjuncan/miniconda3/envs/gcc9/lib/python3.7/site-packages/torch/distributed/launch.py", line 191, in main
+    launch(args)
+  File "/data/home/jinjuncan/miniconda3/envs/gcc9/lib/python3.7/site-packages/torch/distributed/launch.py", line 176, in launch
+    run(args)
+  File "/data/home/jinjuncan/miniconda3/envs/gcc9/lib/python3.7/site-packages/torch/distributed/run.py", line 756, in run
+    )(*cmd_args)
+  File "/data/home/jinjuncan/miniconda3/envs/gcc9/lib/python3.7/site-packages/torch/distributed/launcher/api.py", line 132, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/data/home/jinjuncan/miniconda3/envs/gcc9/lib/python3.7/site-packages/torch/distributed/launcher/api.py", line 248, in launch_agent
+    failures=result.failures,
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+========================================================
+unimatch.py FAILED
+--------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+--------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2023-02-27_07:18:00
+  host      : oneflow-27
+  rank      : 0 (local_rank: 0)
+  exitcode  : -9 (pid: 2522877)
+  error_file: <N/A>
+  traceback : Signal 9 (SIGKILL) received by PID 2522877
+========================================================

@@ -1,4 +1,5 @@
 import numpy as np
+import torch
 import logging
 import os
 
@@ -96,6 +97,41 @@ def intersectionAndUnion(output, target, K, ignore_index=255):
     area_target, _ = np.histogram(target, bins=np.arange(K + 1))
     area_union = area_output + area_target - area_intersection
     return area_intersection, area_union, area_target
+
+
+def eval_metric(predict, target):
+    # cpu tensor 
+    # add our eval mode for different metrics
+    TP = torch.bitwise_and((predict == 1), (target == 1)).long().sum()
+    TN = torch.bitwise_and((predict == 0), (target == 0)).long().sum()
+    FP = torch.bitwise_and((predict == 1), (target == 0)).long().sum()
+    FN = torch.bitwise_and((predict == 0), (target == 1)).long().sum()
+    assert TP + TN + FP + FN == torch.numel(target), "count error"
+    if TP + FP + FN == 0:
+        change_IOU = torch.tensor(1)
+    else:
+        change_IOU = TP / (TP + FP + FN) if TP + FP + FN != 0 else torch.tensor(0)
+    unchange_IOU = TN / (TN + FN + FP) if TN + FN + FP != 0 else torch.tensor(0)
+    accuracy = (TP + TN) / (TP + TN + FP + FN)
+    if TP + FP == 0:
+        precision = torch.tensor(1)
+    else:
+        precision = TP / (TP + FP) if TP + FP != 0 else torch.tensor(0)
+    if TP + FN == 0:
+        recall = torch.tensor(1)
+    else:
+        recall = TP / (TP + FN) if TP + FN != 0 else torch.tensor(0)
+    f1score = 2 * precision * recall / (
+            precision + recall + torch.tensor(1e-10)) if precision + recall != 0 else torch.tensor(0)
+    result = {
+        'Accuracy': accuracy,
+        'Precision': precision,
+        'Recall': recall,
+        'F1_score': f1score,
+        "change_IOU": change_IOU,
+        "unchange_IOU": unchange_IOU
+    }
+    return result
 
 
 logs = set()
